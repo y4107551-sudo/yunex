@@ -31,6 +31,66 @@ section{padding:70px 7%}.title{text-align:center;margin-bottom:40px}.title h2{fo
 .contact{text-align:center;background:#15151d;border-radius:28px;padding:55px 20px;margin:30px 7% 70px}.contact p{color:#bbb}.phone{font-size:25px;color:#ff6f91;font-weight:bold}
 footer{text-align:center;padding:25px;color:#777;border-top:1px solid #222}
 @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.cards,.portfolio{grid-template-columns:1fr}.visual{height:300px}.links{display:none}}
+  /* انیمیشن ورود بخش‌های سایت */
+@keyframes yunexFade {
+from {
+opacity: 0;
+transform: translateY(25px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.hero > div {
+animation: yunexFade 1s ease both;
+}
+
+.card {
+transition: transform .3s ease, border-color .3s ease;
+}
+
+.card:hover {
+transform: translateY(-8px);
+border-color: #ff3d71;
+}
+
+.work {
+animation: yunexFade .8s ease both;
+}
+
+.work:nth-child(2) {
+animation-delay: .15s;
+}
+
+.work:nth-child(3) {
+animation-delay: .3s;
+}
+
+.btn {
+transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 25px #ff3d7166;
+}
+
+.logo {
+transition: transform .3s ease;
+}
+
+.logo:hover {
+transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+animation: none !important;
+transition: none !important;
+}
+}
 </style>
 </head>
 <body>
